@@ -22,5 +22,3 @@ def productView(request):
 
 def checkout(request):
     return HttpResponse("We are at checkout")
-
-pratikkagale3333@gmail.com

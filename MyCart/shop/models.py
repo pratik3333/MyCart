@@ -29,3 +29,9 @@ class User(models.Model):
 
     def __str__(self):
         return f'The user name is {self.name}\n{self.age}'
+
+class Participant(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email

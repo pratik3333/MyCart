@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class product(models.Model):
-    product_id=models.AutoField
+    product_id=models.IntegerField(max_length=200)
     product_name=models.CharField(max_length=50)
     category=models.CharField(max_length=50,default="")
     subcategory=models.CharField(max_length=50,default="")
@@ -23,15 +23,17 @@ class Location(models.Model):
         return f'{self.name} ({self.address})'
 
 
-class User(models.Model):
-    name=models.CharField(max_length=100)
-    age=models.IntegerField(max_length=100)
-
-    def __str__(self):
-        return f'The user name is {self.name}\n{self.age}'
 
 class Participant(models.Model):
     email = models.EmailField(unique=True)
 
     def __str__(self):
         return self.email
+
+class Destination:
+    id:int
+    name:str
+    img:str
+    desc:str
+    price:int
+

@@ -24,5 +24,6 @@ def search(request):
 def productView(request):
     return HttpResponse("We are at productView")
 
+
 def checkout(request):
     return HttpResponse("We are at checkout")
